@@ -1,0 +1,187 @@
+﻿@{
+    ViewData["Title"] = "T-Gin";
+}
+
+@* Hero *@
+<div class="row align-items-center g-lg-5 mb-5">
+    <div class="col m-auto">
+        <h1 class="display-4 font-weight-bold">Это просто лучший слоган</h1>
+        <hr />
+        <h4 class="font-weight-light">И не менее классный подзаголовок с мотивирующим и вдохновляющим посылом</h4>
+    </div>
+    <div class="col">
+        <img src="~/img/hero-placeholder.svg" />
+    </div>
+</div>
+
+@* Carousel *@
+@{
+    string carouselId = "carousel-1";
+}
+<div id="@carouselId" class="carousel slide mb-5" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#@carouselId" data-slide-to="0" class="active"></li>
+        <li data-target="#@carouselId" data-slide-to="1"></li>
+        <li data-target="#@carouselId" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <div class="w-100 text-center display-3 bg-info" style="width: 800px; height: 400px;">First slide</div>
+        </div>
+        <div class="carousel-item">
+            <div class="w-100 text-center display-3 bg-secondary" style="width: 800px; height: 400px;">Second slide</div>
+        </div>
+        <div class="carousel-item">
+            <div class="w-100 text-center display-3 bg-success" style="width: 800px; height: 400px;">Third slide</div>
+        </div>
+    </div>
+    <a class="carousel-control-prev" href="#@carouselId" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#@carouselId" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+
+@* Card deck *@
+<div class="card-deck mb-5" style="min-height: 250px;">
+    <div class="card shadow">
+        <div class="card-body d-flex flex-column justify-content-between">
+            <img src="~/img/card-placeholder.svg" class="mr-5" />
+            <div>
+                <h5 class="card-title">Cras sagittis</h5>
+                <button type="button" class="btn btn-primary font-weight-bold px-5">-></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="card shadow">
+        <div class="card-body d-flex flex-column justify-content-between">
+            <img src="~/img/card-placeholder.svg" class="mr-5" />
+            <div>
+                <h5 class="card-title">Cras sagittis</h5>
+                <button type="button" class="btn btn-primary font-weight-bold px-5">-></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="card shadow">
+        <div class="card-body d-flex flex-column justify-content-between">
+            <img src="~/img/card-placeholder.svg" class="mr-5" />
+            <div>
+                <h5 class="card-title">Cras sagittis</h5>
+                <button type="button" class="btn btn-primary font-weight-bold px-5">-></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="card shadow">
+        <div class="card-body d-flex flex-column justify-content-between">
+            <img src="~/img/card-placeholder.svg" class="mr-5" />
+            <div>
+                <h5 class="card-title">Cras sagittis</h5>
+                <button type="button" class="btn btn-primary font-weight-bold px-5">-></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="card shadow">
+        <div class="card-body d-flex flex-column justify-content-between">
+            <img src="~/img/card-placeholder.svg" class="mr-5" />
+            <div>
+                <h5 class="card-title">Cras sagittis</h5>
+                <button type="button" class="btn btn-primary font-weight-bold px-5">-></button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@* Hero with list *@
+<div class="row align-items-center mb-5">
+
+    <div class="col">
+        <img src="~/img/models-1-placeholder.svg" />
+    </div>
+
+    <div class="col">
+        <h1 class="display-4 lh-1 mb-3">Как мы это делаем</h1>   
+        <h4 class="font-weight-light">Pellentesque semper porta tortor sit amet ornare. Pellentesque tincidunt hendrerit dui, ut interdum lorem congue eget. Praesent non bibendum nisi, ut viverra neque. Quisque augue justo, sagittis non mi ut, tincidunt luctus elit.</h4>
+        <div>
+            <div class="d-flex flex-row m-3">
+                <div class="d-flex p-4 mr-3 align-items-center justify-content-center bg-primary rounded-circle font-weight-bold" style="width: 50px; height: 50px; color: ghostwhite;">1</div>
+                <div class="h4 font-weight-light">Aenean porttitor risus nec tristique pretium. Nullam tempor, arcu vitae maximus iaculis, quam massa accumsan ante, eget fringilla tellus lacus vitae tortor.</div>
+            </div>
+            <div class="d-flex flex-row m-3">
+                <div class="d-flex p-4 mr-3 align-items-center justify-content-center bg-primary rounded-circle font-weight-bold" style="width: 50px; height: 50px; color: ghostwhite;">2</div>
+                <div class="h4 font-weight-light">Proin posuere nulla in nulla molestie, in mattis libero congue. Nunc sit amet ornare metus. Nunc fermentum erat sit amet metus varius, nec consequat magna tristique. Cras pellentesque semper urna, finibus semper elit.</div>
+            </div>
+            <div class="d-flex flex-row m-3">
+                <div class="d-flex p-4 mr-3 align-items-center justify-content-center bg-primary rounded-circle font-weight-bold" style="width: 50px; height: 50px; color: ghostwhite;">3</div>
+                <div class="h4 font-weight-light">Mauris nisl odio, bibendum in condimentum eget, porta sit amet libero.</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@* Solutions section *@
+<div class="mb-5">
+    <h1 class="display-4 mb-3">Решения</h1>
+
+    <div class="card-deck" style="min-height: 250px;">
+        <div class="card">
+            <a asp-area="" asp-controller="home" asp-action="error" class="card-body d-flex flex-column justify-content-between start">
+                <img src="~/img/card-placeholder-2.svg" style="max-height: 90px;"/>
+                <div class="card-title">Maecenas</div>
+            </a>
+        </div>
+        <div class="card">
+            <a asp-area="" asp-controller="home" asp-action="error" class="card-body d-flex flex-column justify-content-between">
+                <img src="~/img/card-placeholder-2.svg" />
+                <div class="card-title">Pellentesque</div>
+            </a>
+        </div>
+        <div class="card">
+            <a asp-area="" asp-controller="home" asp-action="error" class="card-body d-flex flex-column justify-content-between">
+                <img src="~/img/card-placeholder-2.svg" />
+                <div class="card-title">Quisque</div>
+            </a>
+        </div>
+        <div class="card">
+            <a asp-area="" asp-controller="home" asp-action="error" class="card-body d-flex flex-column justify-content-between">
+                <img src="~/img/card-placeholder-2.svg" />
+                <div class="card-title">Aenean</div>
+            </a>
+        </div>
+        <div class="card">
+            <a asp-area="" asp-controller="home" asp-action="error" class="card-body d-flex flex-column justify-content-between">
+                <img src="~/img/card-placeholder-2.svg" />
+                <div class="card-title">Nunc</div>
+            </a>
+        </div>
+        <div class="card">
+            <a asp-area="" asp-controller="home" asp-action="error" class="card-body d-flex flex-column justify-content-between">
+                <img src="~/img/card-placeholder-2.svg" />
+                <div class="card-title">Vestibulum</div>
+            </a>
+        </div>
+    </div>
+</div>
+
+@* About section *@
+<div class="row align-items-center">
+    <div class="col"><img src="~/img/about-placeholder.svg" /></div>
+    <div class="col">
+        <h1 class="display-4 mb-3">О компании</h1>
+        <hr />
+        <h4 class="font-weight-light mb-3">Maecenas quam enim, luctus sed ante vitae, vehicula molestie ante. Quisque vitae rhoncus justo, a faucibus augue. Fusce ac dolor efficitur, tincidunt elit at, ultricies magna. Nunc eu dapibus mi, sed imperdiet quam. Nullam metus mauris, pretium non imperdiet ac, elementum a dui.</h4>
+        <a asp-area="" asp-controller="home" asp-action="about"><div class="btn btn-primary">Подробнее</div></a>
+    </div>
+</div>
+
+<!-- Carousel 
+-->
+
+
+

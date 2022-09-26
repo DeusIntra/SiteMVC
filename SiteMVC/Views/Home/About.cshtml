@@ -1,0 +1,37 @@
+﻿@{
+    ViewData["Title"] = "О компании";
+}
+
+@* Hero *@
+<div class="row align-items-center justify-content-between g-lg-5 mb-5">
+    <div class="col-6">
+        <h1 class="display-4 font-weight-bold">О компании</h1>
+        <hr />
+        <h4 class="font-weight-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare nisl id diam tempor, a mollis lorem interdum. Nullam velit urna, finibus quis erat et, dignissim ullamcorper leo. Curabitur iaculis lobortis elementum. Vivamus hendrerit mauris in pretium molestie. Nam imperdiet quam enim, ornare finibus sem hendrerit at. Proin id tincidunt elit, pulvinar vestibulum ligula. Mauris in mi id ipsum facilisis hendrerit sit amet ac velit.</h4>
+    </div>
+    <div class="col-5">
+        <img src="~/img/about-hero-placeholder.svg" />
+    </div>
+</div>
+
+@* Quartet *@
+<div class="col-8">
+    <h1 class="display-4 font-weight-bold">Главный принцип работы компании&nbsp;— <span class="text-primary">ориентированность на потребности клиента</span></h1>
+    <hr />
+    <h4 class="font-weight-light">Nullam velit urna, finibus quis erat et, dignissim ullamcorper leo. Curabitur iaculis lobortis elementum. Vivamus hendrerit mauris in pretium molestie. Nam imperdiet quam enim, ornare finibus sem hendrerit at. Proin id tincidunt elit, pulvinar vestibulum ligula. Mauris in mi id ipsum facilisis hendrerit sit amet ac velit.</h4>
+</div>
+
+@{
+    string placeholder = "Nullam velit urna, finibus quis erat et, dignissim ullamcorper leo. Curabitur iaculis lobortis elementum. Vivamus hendrerit mauris in pretium molestie. Nam imperdiet quam enim, ornare finibus sem hendrerit at. Proin id tincidunt elit, pulvinar vestibulum ligula. Mauris in mi id ipsum facilisis hendrerit sit amet ac velit.";
+    string classes = "col border p-3 m-3";
+}
+<div class="border d-flex flex-column" style="height: 500px;">
+    <div class="row">
+        <div class="@classes">@placeholder</div>
+        <div class="@classes">@placeholder</div>
+    </div>
+    <div class="row">
+        <div class="@classes">@placeholder</div>
+        <div class="@classes">@placeholder</div>
+    </div>
+</div>
