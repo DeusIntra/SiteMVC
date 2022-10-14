@@ -16,12 +16,18 @@
                     <a asp-area="" asp-controller="home" asp-action="index"><img src="~/img/Logo-1.png" style="max-height: 60px;" /></a>
                     <ul class="nav col-lg-auto me-lg-auto mb-2 mb-md-0 align-items-center">
                         @{
-                            string navLinkClass = "nav-link link-secondary text-black-50";
+                            List<string[]> links = new List<string[]>()
+                            {
+                                new string[] {"about", "Компания"},
+                                new string[] {"solutions", "Решения"},
+                                new string[] {"clients", "Клиенты"},
+                                new string[] {"contact", "Контакты"}
+                            };
                         }
-                        <li class="pl-3"><a asp-area="" asp-controller="home" asp-action="about" class="@navLinkClass">О нас</a></li>
-                        <li class="pl-3"><a asp-area="" asp-controller="home" asp-action="solutions" class="@navLinkClass">Решения</a></li>
-                        <li class="pl-3"><a asp-area="" asp-controller="home" asp-action="clients" class="@navLinkClass">Клиенты</a></li>
-                        <li class="pl-3"><a asp-area="" asp-controller="home" asp-action="contact" class="@navLinkClass">Контакты</a></li>
+                        @for (int i = 0; i < links.Count; i++)
+                        {
+                            <li class="pl-3"><a asp-area="" asp-controller="home" asp-action="@links[i][0]" class="nav-link link-secondary text-black-50">@links[i][1]</a></li>
+                        }
                     </ul>
                 </div>
                 <a asp-area="" asp-controller="Home" asp-action="Contact"><div class="btn btn-primary">Связаться</div></a>
@@ -30,7 +36,7 @@
         </div>
     </header>
 
-    <div class="container">
+    <div class="container p-5">
         <main role="main" class="pb-5">
             @RenderBody()
         </main>
