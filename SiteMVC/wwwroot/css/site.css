@@ -1,13 +1,67 @@
-﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-for details on configuring this project to bundle and minify static web assets. */
-
-.logo {
-    max-height: 200px;
+﻿
+body {
+    transition: color 0.3s linear;
+    color: whitesmoke;
+    background-color: #020204;
 }
 
-a:link {
-    color: black;
-}
+    body .nav-item-home, body .nav-item-solution, body .nav-item-clients, body .nav-item-contact {
+        transition: color 0.3s linear;
+        color: whitesmoke;
+    }
+
+    body footer {
+        transition: color 0.3s linear;
+        color: whitesmoke;
+        background-color: #08080a;
+    }
+
+    a.footer-brand {
+        color: whitesmoke;
+    }
+
+    body.lightTheme {
+        color: black;
+        background-color: white;
+    }
+
+        body.lightTheme header {
+            color: #000000;
+            background-color: #ffffff;
+        }
+
+        body.lightTheme header.scroll {
+            transition: box-shadow 0.2s linear;
+            box-shadow: #808080 1px 1px 6px;
+        }
+
+        body.lightTheme footer {
+            color: #000000;
+            background-color: #ffffff;
+        }
+
+        body.lightTheme container {
+            color: #000000;
+            background-color: #ffffff;
+        }
+
+        body.lightTheme .nav-item-home, body.lightTheme .nav-item-clients, body.lightTheme .nav-item-solution, body.lightTheme .nav-item-contact {
+            color: black;
+        }
+
+        .nav-item-home:hover, .nav-item-solution:hover, .nav-item-clients:hover, .nav-item-contact:hover {
+            transition: background-color 0.3s linear;
+            background-color: #b9b9b9;
+        }
+
+    body.lightTheme h5.card-title {
+        color: black;
+    }
+
+
+    a:link {
+        color: black;
+    }
 
 /* visited link */
 a:visited {
@@ -24,67 +78,195 @@ a:hover {
 a:active {
     color: black;
 }
-/*
+
 a.navbar-brand {
   white-space: normal;
   text-align: center;
   word-break: break-all;
 }
-a {
-  color: #0366d6;
+
+header {
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    padding-bottom: 10px;
+    color: whitesmoke;
+    background-color: #000000;
 }
 
-.btn-primary {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+    header.scroll {
+        transition: color, box-shadow 0.3s linear;
+        box-shadow: #00152b 4px 4px 20px;
+    }
+
+.logo {
+    padding-top: 20px;
+    height: 80px;
+    transition: height 0.2s linear;
 }
 
-.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+    .logo:hover {
+        height: 82px;
+    }
+
+ul {
+    display: inline-block;
+    padding: 20px;
 }
 
-html {
-  font-size: 14px;
-}
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-}
-
-.border-top {
-  border-top: 1px solid #e5e5e5;
-}
-.border-bottom {
-  border-bottom: 1px solid #e5e5e5;
+.nav-item-home, .nav-item-solution, .nav-item-clients, .nav-item-contact {
+    color: whitesmoke;
+    border-radius: 8px;
+    padding: 4px 4px 4px 4px;
+    background: none;
+    transition: font-size, background-color 0.3s linear;
 }
 
-.box-shadow {
-  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+    .nav-item-home:hover, .nav-item-solution:hover, .nav-item-clients:hover, .nav-item-contact:hover {
+        transition: background-color 0.3s linear;
+        background-color: #494949;
+    }
+
+    .nav-item-home:active, .nav-item-solution:active, .nav-item-clients:active, .nav-item-contact:active {
+        transition: font-size, background-color 0.3s linear;
+        font-size: 18px;
+        background-color: #494949
+    }
+
+
+.nav-item-button {
+    margin-left: 34px;
+    margin-top: 17px;
 }
 
-button.accept-policy {
-  font-size: 1rem;
-  line-height: inherit;
+.btn-change-theme {
+    width: 20px;
+    height: 20px;
+    background: #111111;
+    outline-width: 10px;
+    outline-offset: -1px;
+    cursor: pointer;
+    outline: solid 5px #111111;
+    border-radius: 10px;
+    margin-bottom: 16px;
+    transition: outline-width 0.2s linear;
 }
 
+    .btn-change-theme:active {
+        outline-width: 10px;
+    }
 
-html {
-  position: relative;
-  min-height: 100%;
+    .btn-change-theme:hover {
+        background: #222222;
+        outline-color: #222222;
+    }
+
+.btn.btn-primary {
+    padding: 0px 0px 0px 0px;
+    margin-left: 10px;
+    width: 90px;
+    height: 30px;
+    margin-top: 32px;
 }
 
-body {
-  margin-bottom: 60px;
+.btn-contact {
+    text-align: center;
+    color: whitesmoke;
 }
-.footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  white-space: nowrap;
-  line-height: 60px; /* Vertically center the text there 
+
+.firstSub, .secondSub {
+    display: flex;
+    width: 50px;
+    height: 50px;
+    background-color: indianred;
+    align-content: center;
+    border-radius: 10px;
+    color: whitesmoke;
 }
-*/
+
+.card-placeholder {
+    background-color: whitesmoke;
+    padding: 0px 0px 0px 0px;
+    height: 100px;
+}
+
+.card {
+    background-color: whitesmoke;
+    transition: background, outline, box-shadow 0.2s cubic-bezier(0.5, 0.5, 0.5, 0.5);
+}
+
+    .card:hover {
+        background: #007BFF;
+        box-shadow: #808080 1.5px 1.5px 10px;
+    }
+
+.card-title:hover {
+    color: whitesmoke;
+    font-size: 26px;
+}
+
+.card {
+    margin-top: 10rem;
+    opacity: 0;
+}
+
+    .card.smooth-scroll {
+        transition: opacity,margin 0.7s cubic-bezier(0.2, 0.4, 0.6, 0.8);
+        margin: 0rem 10px;
+        opacity: 100%;
+    }
+
+.card-inner {
+    padding-right: 10px;
+}
+
+.cardsPic {
+    height: 50px;
+    transition: height 0.2s linear;
+}
+
+    .cardsPic:hover {
+        height: 150px;
+    }
+
+.card-title {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 50px;
+    transition: font-size 0.2s linear;
+}
+
+.carousel-inner {
+    margin-top: 100px;
+}
+
+.short-about {
+    margin-left: 10rem;
+    opacity: 0;
+}
+
+    .short-about.smooth-scroll {
+        transition: opacity, margin 0.7s cubic-bezier(0.2, 0.4, 0.6, 0.8);
+        margin-left: 0;
+        opacity: 100%;
+    }
+
+
+.hero-with-list {
+    padding-top: 100px;
+}
+
+.list-circle {
+    text-align: center;
+    text-justify: inter-word;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    color: black;
+    background: #80bdff;
+}
+
+    .list-circle:active {
+        color: whitesmoke;
+        background: #007BFF;
+    }

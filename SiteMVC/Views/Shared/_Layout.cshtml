@@ -7,26 +7,28 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css"/>
 </head>
-<body>
-    <header class="py-3 mb-3 border-bottom shadow">
+<body class="lightTheme" onload="changeTheme(false)" style="background-color: argb(7,7,7,255)">
+    <header>
         <div class="d-flex justify-content-around ">
-            <div class="col-1"></div>
             <div class="d-flex col-8 justify-content-between align-items-center">
-                <div class="d-flex justify-content-around">
-                    <a asp-area="" asp-controller="home" asp-action="index"><img src="~/img/Logo-1.png" style="max-height: 60px;" /></a>
-                    <ul class="nav col-lg-auto me-lg-auto mb-2 mb-md-0 align-items-center">
-                        @{
-                            string navLinkClass = "nav-link link-secondary text-black-50";
-                        }
-                        <li class="pl-3"><a asp-area="" asp-controller="home" asp-action="about" class="@navLinkClass">О нас</a></li>
-                        <li class="pl-3"><a asp-area="" asp-controller="home" asp-action="solutions" class="@navLinkClass">Решения</a></li>
-                        <li class="pl-3"><a asp-area="" asp-controller="home" asp-action="clients" class="@navLinkClass">Клиенты</a></li>
-                        <li class="pl-3"><a asp-area="" asp-controller="home" asp-action="contact" class="@navLinkClass">Контакты</a></li>
-                    </ul>
+                <div class="header-content">
+                    <div class="d-flex justify-content-around">
+                        <a asp-area="" asp-controller="home" asp-action="index"><img class="logo" alt="logotype" src="~/img/Logo-1.png" style="max-height: 85px; margin-left:0px;" /></a>
+                        <ul class="nav col-lg-auto me-lg-auto mb-2 mb-md-0 align-items-center">
+                            @{
+                                string navLinkClass = "nav-link link-secondary text-black-50";
+                            }
+                            <li class="pl-3"><a asp-area="" asp-controller="home" asp-action="about" class="@navLinkClass"><div class="nav-item-home">О нас</div></a></li>
+                            <li class="pl-3"><a asp-area="" asp-controller="home" asp-action="solutions" class="@navLinkClass"><div class="nav-item-solution">Решения</div></a></li>
+                            <li class="pl-3"><a asp-area="" asp-controller="home" asp-action="clients" class="@navLinkClass"><div class="nav-item-clients">Клиенты</div></a></li>
+                            <li class="pl-3"><a asp-area="" asp-controller="home" asp-action="contact" class="@navLinkClass"><div class="nav-item-contact">Контакты</div></a></li>
+                            <li class="pl-3"><div class="nav-item-button" onclick="changeTheme(true)"><img src="~/img/dark-theme.png" class="btn-change-theme" /></div></li>
+                        </ul>
+                        <a asp-area="" asp-controller="Home" asp-action="Contact"><div class="btn btn-primary"><div class="btn-contact">Связаться</div></a>
+                    </div>
+                    </div>
                 </div>
-                <a asp-area="" asp-controller="Home" asp-action="Contact"><div class="btn btn-primary">Связаться</div></a>
             </div>
-            <div class="col-1"></div>
         </div>
     </header>
 
@@ -41,15 +43,16 @@
         <div class="container">
             <div class="d-flex justify-content-between">
                 <div>
-                    &copy; 2022 - <a asp-area="" asp-controller="Home" asp-action="Index">"ООО Т-ДЖИН"</a>
+                    &copy; 2022 - <a class="footer-brand" asp-area="" asp-controller="Home" asp-action="Index">"ООО Т-ДЖИН"</a>
                 </div>
-                <div>Номер телефона</div>
+                <div>Номер телефона <br /> +7 (999) 999 99-99</div>
             </div>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/lib/chart/lib/liteChartrt.js"></script>
     @RenderSection("Scripts", required: false)
 </body>
 </html>
