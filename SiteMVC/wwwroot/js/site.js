@@ -146,3 +146,19 @@ document.addEventListener("DOMContentLoaded", function () {
     d.draw();
 });
 // ===================================================================== //
+
+
+
+
+document.querySelector("list-circle1").addEventListener("mouseenter", () => {
+    document.querySelector("hero-with-list-pic").style.src = "~/img/models-1-placeholder.png";
+    console.log(document.querySelector("hero-with-list-pic").style.src);
+});
+
+document.querySelector("list-circle2").addEventListener("mouseenter", () => {
+    document.querySelector("hero-with-list-pic").style.src = "~/img/models-2-placeholder.png";
+});
+
+document.querySelector("list-circle3").addEventListener("mouseenter", () => {
+    document.querySelector("hero-with-list-pic").style.src = "~/img/models-3-placeholder.png";
+});

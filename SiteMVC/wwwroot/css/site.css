@@ -1,8 +1,8 @@
 ﻿
 body {
-    transition: color 0.3s linear;
+    transition: color 0.2s cubic-bezier(0.2, 0.4, 0.6, 0.8);
     color: whitesmoke;
-    background-color: #020204;
+    background-color: rgba(7,7,7,255);
 }
 
     body .nav-item-home, body .nav-item-solution, body .nav-item-clients, body .nav-item-contact {
@@ -16,7 +16,7 @@ body {
         background-color: #08080a;
     }
 
-    a.footer-brand {
+    body .footer-text {
         color: whitesmoke;
     }
 
@@ -40,6 +40,10 @@ body {
             background-color: #ffffff;
         }
 
+        body.lightTheme .footer-text {
+            color: #000000
+        }
+
         body.lightTheme container {
             color: #000000;
             background-color: #ffffff;
@@ -49,19 +53,19 @@ body {
             color: black;
         }
 
-        .nav-item-home:hover, .nav-item-solution:hover, .nav-item-clients:hover, .nav-item-contact:hover {
-            transition: background-color 0.3s linear;
-            background-color: #b9b9b9;
-        }
+            body.lightTheme .nav-item-home:hover, body.lightTheme .nav-item-solution:hover, body.lightTheme .nav-item-clients:hover, body.lightTheme .nav-item-contact:hover {
+                transition: background-color 0.3s linear;
+                background-color: #b9b9b9;
+            }
 
     body.lightTheme h5.card-title {
         color: black;
     }
 
 
-    a:link {
-        color: black;
-    }
+a:link {
+    color: black;
+}
 
 /* visited link */
 a:visited {
@@ -96,22 +100,23 @@ header {
 
     header.scroll {
         transition: color, box-shadow 0.3s linear;
-        box-shadow: #00152b 4px 4px 20px;
+        box-shadow: #00152b 6px 6px 20px;
     }
 
 .logo {
-    padding-top: 20px;
-    height: 80px;
+    max-height: 102px;
+    height: 100px;
+    padding: 20px;
     transition: height 0.2s linear;
 }
 
     .logo:hover {
-        height: 82px;
+        height: 102px;
     }
 
 ul {
     display: inline-block;
-    padding: 20px;
+    margin: 20px -40%;
 }
 
 .nav-item-home, .nav-item-solution, .nav-item-clients, .nav-item-contact {
@@ -128,8 +133,8 @@ ul {
     }
 
     .nav-item-home:active, .nav-item-solution:active, .nav-item-clients:active, .nav-item-contact:active {
-        transition: font-size, background-color 0.3s linear;
-        font-size: 18px;
+        transition: font-size, background-color, font-size 0.3s linear;
+        font-size: 16.5px;
         background-color: #494949
     }
 
@@ -161,26 +166,9 @@ ul {
         outline-color: #222222;
     }
 
-.btn.btn-primary {
-    padding: 0px 0px 0px 0px;
-    margin-left: 10px;
-    width: 90px;
-    height: 30px;
-    margin-top: 32px;
-}
-
 .btn-contact {
     text-align: center;
-    color: whitesmoke;
-}
-
-.firstSub, .secondSub {
-    display: flex;
-    width: 50px;
-    height: 50px;
-    background-color: indianred;
-    align-content: center;
-    border-radius: 10px;
+    border-radius: 20px;
     color: whitesmoke;
 }
 
@@ -206,13 +194,13 @@ ul {
 }
 
 .card {
-    margin-top: 10rem;
+    margin-top:50%;
     opacity: 0;
 }
 
     .card.smooth-scroll {
         transition: opacity,margin 0.7s cubic-bezier(0.2, 0.4, 0.6, 0.8);
-        margin: 0rem 10px;
+        margin: 100px 10px ;
         opacity: 100%;
     }
 
@@ -252,21 +240,33 @@ ul {
     }
 
 
-.hero-with-list {
-    padding-top: 100px;
+.list-circle .first-state {
 }
 
-.list-circle {
-    text-align: center;
-    text-justify: inter-word;
+.list-circle .second-state {
+}
+
+.list-circle .third-state {
+}
+
+.list-circle1, .list-circle2, .list-circle3 {
+    margin-top: 10%;
     width: 80px;
     height: 80px;
-    border-radius: 50%;
     color: black;
     background: #80bdff;
+    color: whitesmoke;
+    font-size: 20px;
+    border-radius: 50%;
 }
 
-    .list-circle:active {
-        color: whitesmoke;
+    .list-circle1:hover, .list-circle2:hover, .list-circle3:hover {
+        color: white;
         background: #007BFF;
+    }
+
+.circle-text {
+}
+
+    .circle-text:hover {
     }
