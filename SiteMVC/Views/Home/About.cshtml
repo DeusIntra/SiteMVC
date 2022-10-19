@@ -15,23 +15,64 @@
 </div>
 
 @* Quartet *@
-<div class="col-8">
-    <h1 class="display-4 font-weight-bold">Главный принцип работы компании&nbsp;— <span class="text-primary">ориентированность на потребности клиента</span></h1>
-    <hr />
-    <h4 class="font-weight-light">Nullam velit urna, finibus quis erat et, dignissim ullamcorper leo. Curabitur iaculis lobortis elementum. Vivamus hendrerit mauris in pretium molestie. Nam imperdiet quam enim, ornare finibus sem hendrerit at. Proin id tincidunt elit, pulvinar vestibulum ligula. Mauris in mi id ipsum facilisis hendrerit sit amet ac velit.</h4>
+<div class="mb-5">
+    <div class="col-8 p-0">
+        <h1 class="display-4 font-weight-bold">Главный принцип работы компании&nbsp;— <span class="text-primary">ориентированность на потребности клиента</span></h1>
+        <hr />
+        <h4 class="font-weight-light">Nullam velit urna, finibus quis erat et, dignissim ullamcorper leo. Curabitur iaculis lobortis elementum. Vivamus hendrerit mauris in pretium molestie. Nam imperdiet quam enim, ornare finibus sem hendrerit at. Proin id tincidunt elit, pulvinar vestibulum ligula. Mauris in mi id ipsum facilisis hendrerit sit amet ac velit.</h4>
+    </div>
+
+    @* 4x4 *@
+    <div class="d-flex flex-wrap">
+        @for (int i = 0; i < 4; i++)
+        {
+            <div class="w-50 my-3">
+                <img src="~/img/principle-3-placeholder.svg" />
+                <h3>Morbi pellentesque</h3>
+                <div>Nullam velit urna, finibus quis erat et, dignissim ullamcorper leo. Curabitur iaculis lobortis elementum. Vivamus hendrerit mauris in pretium molestie. Nam imperdiet quam enim, ornare finibus sem hendrerit at.</div>
+            </div>
+        }
+    </div>
 </div>
 
-@{
-    string placeholder = "Nullam velit urna, finibus quis erat et, dignissim ullamcorper leo. Curabitur iaculis lobortis elementum. Vivamus hendrerit mauris in pretium molestie. Nam imperdiet quam enim, ornare finibus sem hendrerit at. Proin id tincidunt elit, pulvinar vestibulum ligula. Mauris in mi id ipsum facilisis hendrerit sit amet ac velit.";
-    string classes = "col border p-3 m-3";
-}
-<div class="border d-flex flex-column" style="height: 500px;">
-    <div class="row">
-        <div class="@classes">@placeholder</div>
-        <div class="@classes">@placeholder</div>
-    </div>
-    <div class="row">
-        <div class="@classes">@placeholder</div>
-        <div class="@classes">@placeholder</div>
+@* T-Gin is *@
+<div>
+    <h1 class="display-4 font-weight-bold mb-5">T-Gin — это</h1>
+    <div class="d-flex flex-wrap justify-content-between">
+        <div class="col-sm-12 col-md-12 col-lg-8 d-flex">
+            <div class="shadow rounded d-flex my-3 p-3">
+                <div class="col-7">
+                    <h4>Сплоченная команда</h4>
+                    Профессионалов высокой квалификации, которая продолжает расти
+                </div>
+                <img src="~/img/about-item-placeholder.svg" class="col-5 pt-5"/>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-4 d-flex">
+            <div class="col-12 d-flex flex-column justify-content-between text-white bg-primary shadow rounded my-3 p-3">
+                <div>
+                    <h4>Мы открыты для новых специалистов</h4>
+                    <div>Готовы предоставить интересную работу и дальнейший рост</div>
+                </div>
+                <a asp-area="" asp-controller="home" asp-action="jobs">
+                    <div class="border text-white rounded p-3 text-center">Смотреть вакансии</div>
+                </a>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-4 d-flex">
+            <div class="d-flex flex-column col-12 shadow rounded my-3 p-3">
+                <span class="text-primary"><h3>>7 лет</h3>работы</span>
+                <p class="mt-5">и сотни успешно реализованных проектов</p>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-12 col-lg-8 d-flex">
+            <div class="d-flex flex-column col-12 shadow rounded my-3 p-3">
+                <h3>Партнеры и заказчики</h3>
+                <p>которые возвращаются к нам с другими проектами</p>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
     </div>
 </div>
