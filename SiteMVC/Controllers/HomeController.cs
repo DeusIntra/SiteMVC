@@ -38,6 +38,11 @@ namespace SiteMVC.Controllers
             return View();
         }
 
+        public IActionResult Jobs()
+        {
+            return View();
+        }
+
         public IActionResult Contact()
         {
             return View();
