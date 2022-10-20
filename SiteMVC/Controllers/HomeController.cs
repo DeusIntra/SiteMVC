@@ -33,6 +33,11 @@ namespace SiteMVC.Controllers
             return View();
         }
 
+        public IActionResult WebApps()
+        {
+            return View();
+        }
+
         public IActionResult Clients()
         {
             return View();
